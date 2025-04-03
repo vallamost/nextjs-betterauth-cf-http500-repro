@@ -1,0 +1,25 @@
+name = "better-auth-react-router-cloudflare-d1"
+
+compatibility_date = "2024-11-18"
+# See https://developers.cloudflare.com/workers/configuration/compatibility-flags/ for full list of flags
+compatibility_flags = ["nodejs_compat"]
+
+# Entry point for the worker app
+main = "./build/server.js"
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
+
+[build]
+command = "bun build"
+
+[assets]
+# https://developers.cloudflare.com/workers/static-assets/binding/ - these are the static assets served to clients
+directory = "./build/client"
+
+[vars]
+# Values defined in .dev.vars will overwrite values here
+BETTER_AUTH_URL="https://nextjs-betterauth-cf-t1.vallamost.workers.dev"
+CLOUDFLARE_ACCOUNT_ID=""
+CLOUDFLARE_DATABASE_ID=""
