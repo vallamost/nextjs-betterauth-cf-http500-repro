@@ -18,7 +18,7 @@ Build command:
 Deploy command:  
 `pnpm run deploy`
 
-Set ENV vars:
+Set ENV vars:  
 BETTER_AUTH_SECRET=randomString
 
 Run deployment
