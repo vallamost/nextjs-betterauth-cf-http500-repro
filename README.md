@@ -6,7 +6,7 @@ pnpm install
 pnpm run dev
 ```
 
-## Deploy Repo to Github
+## Deploy Repo With CF Worker
 
 Make a new worker and connect repo to the worker.
 
@@ -17,5 +17,8 @@ Build command:
 
 Deploy command:  
 `pnpm run deploy`
+
+Set ENV vars:
+BETTER_AUTH_SECRET=randomString
 
 Run deployment
